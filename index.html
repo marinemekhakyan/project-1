@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--Bootstrap References-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <title>CHEFTASTIC</title>
+</head>
+
+<body>
+  <header id="header">The Home of CHEFTASTIC Recipes!</header>
+
+  <div>
+    <container id="main-container">
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="images/image1.jpg" id = "image-1" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+      <form>
+        <div class="form-group">
+          <label for="cuisine-input">I'm in the mood for...</label>
+          <input type="text" class="form-control" id="cuisine-input" aria-describedby="listCuisine"
+            placeholder="Add cuisine">
+        </div>
+        <div class="form-group">
+          <label for="user-ingredients">I have...</label>
+          <input type="text" class="form-control" id="user-ingredients" placeholder="Add ingredients">
+        </div>
+        <div class="form-group">
+          <label for="allergies">Any alergies?</label>
+          <input type="text" class="form-control" id="allergies" placeholder="">
+        </div>
+        <p id="other-options">Other Options</p>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="vegetarian">
+          <label class="form-check-label" for="exampleCheck1">Vegetarian</label> <br>
+          <input type="checkbox" class="form-check-input" id="vegan">
+          <label class="form-check-label" for="exampleCheck1">Vegan</label> <br>
+          <input type="checkbox" class="form-check-input" id="gluten-free">
+          <label class="form-check-label" for="exampleCheck1">Gluten-Free</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </container>
+  </div>
+  <footer>
+    <p>Credit goes to a group of exceptional people</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
