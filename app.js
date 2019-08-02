@@ -1,7 +1,9 @@
 
 var ingredients = "";
 var cuisine = "";
+
 $(document).ready(function () {
+
     $(".btn").on("click", function (event) {
         event.preventDefault();
         $("#main-container").hide();
@@ -17,6 +19,5 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response);
         })
-
     });
 })
