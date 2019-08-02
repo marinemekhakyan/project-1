@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CHEFTASTIC</title>
 
     <!--Bootstrap References-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,7 +21,9 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <title>CHEFTASTIC</title>
+    <!--Bootstrap References-->
+    <link rel="stylesheet" href = "assets/css/style.css">
+
 </head>
 
 <body>
@@ -31,15 +34,15 @@
                 <form>
                         <div class="form-group">
                           <label for="cuisine-input">I'm in the mood for...</label>
-                          <input type="text" class="form-control" id="cuisine-input" aria-describedby="listCuisine" placeholder="Add cuisine">
+                          <input type="text" class="form-control" id="cuisine-input" aria-describedby="listCuisine" placeholder="Italian, Japanese, Mexican">
                         </div>
                         <div class="form-group">
                           <label for="user-ingredients">I have...</label>
-                          <input type ="text" class="form-control" id="user-ingredients" placeholder="Add ingredients">
+                          <input type ="text" class="form-control" id="user-ingredients" placeholder="List your ingredients using commas">
                         </div>
                         <div class="form-group">
-                                <label for="alergies">Any alergies?</label>
-                                <input type="text" class="form-control" id="alergies" placeholder="">
+                                <label for="allergies">Any allergies?</label>
+                                <input type="text" class="form-control" id="allergies" placeholder="">
                               </div>
                               <p id = "other-options">Other Options</p>
                         <div class="form-group form-check">
@@ -52,6 +55,8 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </form>
+
+                      <div id="map"></div>
         </container>
     </div>
     <footer>
