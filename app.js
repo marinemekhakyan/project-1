@@ -4,6 +4,7 @@ var cuisine = "";
 $(document).ready(function () {
     $(".btn").on("click", function (event) {
         event.preventDefault();
+        $("#main-container").hide();
 
         cuisine = $("#cuisine-input").val().trim();
         ingredients = $("#user-ingredients").val().trim();
