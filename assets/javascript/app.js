@@ -1,6 +1,8 @@
 var ingredients = "";
 var cuisine = "";
 
+var groceryStore = $("#grocery-store"); 
+
 // new Glider(document.querySelector('.glider'), {
 //     slidesToShow: 1,
 //     draggable: true,
@@ -15,11 +17,14 @@ var cuisine = "";
 $(document).ready(function () {
     
     $("#second-page").hide();
+    $("#grocery-store").hide();
+    
 
-    $(".btn").on("click", function (event) {
+    $(".main-button").on("click", function (event) {
         event.preventDefault();
         $("#main-container").hide();
         $("#second-page").show();
+        $("#grocery-store").show();
         
         cuisine = $("#cuisine-input").val().trim();
         ingredients = $("#user-ingredients").val().trim();
@@ -71,8 +76,10 @@ $(document).ready(function () {
             }
             
 
+            $("#second-page").append(groceryStore);
         
         })
+
 
 
 
