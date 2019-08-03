@@ -10,11 +10,12 @@
     href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Noto+Sans+TC|Nunito+Sans|Source+Sans+Pro&display=swap"
     rel="stylesheet">
 
-    <link href="./assets/css/glider.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="./assets/css/glider.min.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/glider.min.css">
 
 
   <!-- For our image Carousel -->
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.scss">
+  <!-- <link rel="stylesheet" type="text/css" href="/assets/css/main.scss"> -->
   <!--Bootstrap References-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -40,43 +41,51 @@
 
 <body>
 
-
+<div id="glider-images">
   <div class="jumbotron">
     <h1 class="display-4">CHEFTASTIC</h1>
     <p class="catchphrase">Catchphrase here....</p>
   </div>
 
-  <!-- <div class="glider-contain multiple">
-    <h1>RECIPES OF THE WEEK</h1>
+  <div class="glider-contain multiple">
+    <!-- <h1>RECIPES OF THE WEEK</h1> -->
 
+    
     <button class="glider-prev">
-      <i class="fa fa-chevron-left"></i>
+      <!-- <i class="fa fa-chevron-left"></i> -->
+      <h2>BUTTON</h2>
     </button>
-
-      <div class="glider">
-
+    
+    <div class="glider">
         <figure>
-          <blockquote>"CHICKEN"</blockquote>
-          <figcaption>Try this at home</figcaption>
+          <!-- <blockquote>"CHICKEN"</blockquote>
+          <figcaption>Try this at home</figcaption> -->
+          <img id="pasta" src="./assets/images/pasta.jpg">
         </figure>
-
+        
         <figure>
-          <blockquote>"CHICKEN"</blockquote>
-          <figcaption>Try this at home</figcaption>
+          <!-- <blockquote>"CHICKEN"</blockquote>
+            <figcaption>Try this at home</figcaption> -->
+            <img id="salad" src="./assets/images/salad.jpg">
+          </figure>
+          
+          <figure>
+            <!-- <blockquote>"CHICKEN"</blockquote>
+              <figcaption>Try this at home</figcaption> -->
+              <img id="carrots" src="./assets/images/carrots.jpg">
+
         </figure>
-
-        <figure>
-          <blockquote>"CHICKEN"</blockquote>
-          <figcaption>Try this at home</figcaption>
-        </figure>
-
-        <button class="glider-next">
-            <i class="fa fa-chevron-right"></i>
-        </button>
-
+        
+        
       </div>
+          <button class="glider-next">
+              <!-- <i class="fa fa-chevron-right"></i> -->
+              <h2>BUTTON</h2>
+          </button>
 
-  </div> -->
+
+  </div>
+</div>
 
   <div>
     <container id="main-container">
@@ -127,12 +136,12 @@
             </div>
         </form>
         </div>
-        <button type="submit" class="btn btn-light" id="zip-submit">Submit</button>
+        <button type="submit" class="btn btn-light zip-submit">Submit</button>
 
     </div>
 
     <div id="third-page">
-      
+
     </div>
  
 
@@ -141,7 +150,7 @@
     <p>CHEFTASTIC 2019 &copy;ALL RIGHTS RESERVED......to a group of exceptional people</p>
   </footer>
   <script src="./assets/javascript/app.js"></script>
-  <!-- <script src="glider.min.js"></script> -->
+  <script src="glider.min.js"></script>
 </body>
 
 </html>

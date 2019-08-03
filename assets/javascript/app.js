@@ -3,21 +3,24 @@ var cuisine = "";
 
 var groceryStore = $("#grocery-store"); 
 
-// new Glider(document.querySelector('.glider'), {
-//     slidesToShow: 1,
-//     draggable: true,
-//     dots: '#dots',
-//     arrows: {
-//       prev: '.glider-prev',
-//       next: '.glider-next'
-//     }
-//   });
+window.addEventListener('load', function(){
 
+new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    draggable: true,
+    dots: '#dots',
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    }
+  });
+})
 
 $(document).ready(function () {
     
     $("#second-page").hide();
     $("#grocery-store").hide();
+    $("#third-page").hide();
     
 
     $(".main-button").on("click", function (event) {
@@ -80,8 +83,24 @@ $(document).ready(function () {
         
         })
 
-
-
-
     });
+
+            $(".zip-submit").on("click", function (event) {
+                event.preventDefault();
+                // $("#main-container").hide();
+                $("#second-page").hide();
+                $("#grocery-store").hide();
+                // $("#glider-images").hide();
+                
+                
+                $("#third-page").show();
+
+                
+
+
+
+    
+    
+    
+            })
 })

@@ -16,7 +16,7 @@
 
 footer {
     background-color: #f9e547;
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -52,4 +52,25 @@ footer p {
 
 #second-page {
     height: 1000px; 
+}
+
+.glider img {
+    /* width: 200px;
+    height: 200px; */
+    width: 60%;
+    height: 80%;
+    border-radius: 5px; 
+}
+
+.glider-track {
+    width: 3000px;
+}
+
+/* .pasta .salad .carrots{
+    margin-left: 200px;
+
+} */
+
+figure {
+    margin-left: 300px;
 }
