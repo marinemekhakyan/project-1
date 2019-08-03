@@ -67,21 +67,16 @@ $(document).ready(function () {
                 console.log(recipeTitle)
 
                 var listIngredients = $("<p>");
-                listIngredients.attr("class", "thumbnail");
+                listIngredients.attr("class", "ingredients");
                 listIngredients = response.results[i].ingredients;
                 
                 $("#second-page").append(rowDiv.append(colDiv.append(recipeTitle)));
                 $("#second-page").append(rowDiv.append(colDiv.append(thumbnailDiv.append(img))));
                 $("#second-page").append(rowDiv.append(colDiv.append(listIngredients)));
             }
-            
 
             $("#second-page").append(groceryStore);
         
         })
-
-
-
-
     });
 })
