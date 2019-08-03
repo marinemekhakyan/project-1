@@ -1,0 +1,50 @@
+.jumbotron {
+    background-color: #f9e547;
+    padding: 5px;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-bottom: 0px;
+    color: 	#484848;
+}
+
+.btn {
+    background-color: #adcb00;
+}
+
+.display-4 {
+    font-size: 40px;
+}
+
+footer {
+    background-color: #f9e547;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+}
+
+footer p {
+    margin-bottom: 0px;
+    color: 	#484848;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#mood {
+    font-size: 18px;
+    margin-bottom: 35px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.form-control {
+    width: 150%;
+}
+
+#main-container {
+    justify-content: center;
+    display: flex;
+    padding: 0;
+    padding-top: 50px;
+    font-family: 'Nunito Sans', sans-serif;
+}
