@@ -53,3 +53,24 @@ footer p {
 #second-page {
     height: 1000px; 
 }
+
+.thumbnail {
+    display: block;
+}
+
+.title {
+    display: block;
+}
+
+.ingredients {
+    display: block;
+}
+
+img {
+    height: 180px;
+    width: 180px;
+  }
+
+form {
+    margin-left: -80px;
+}
