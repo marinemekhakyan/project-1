@@ -46,19 +46,28 @@ $(document).ready(function () {
                 //putting these in a column of three
                 colDiv.attr("class","col-md-4");
     
-                var thumbnailDiv = $("<div>");
+                var thumbnailDiv = $("<a>");
                 thumbnailDiv.attr("class", "thumbnail");
+                thumbnailDiv.attr("href", response.results[i].href);
+                thumbnailDiv.attr("target", "_blank");
+
     
                 var img = $("<img>");
-                
-                
                 img.attr("src", response.results[i].thumbnail);
                 console.log(response.results[i].thumbnail)
 
+                var recipeTitle = $("<p>");
+                recipeTitle.attr("class", "title");
+                recipeTitle = response.results[i].title;
+                console.log(recipeTitle)
+
+                var listIngredients = $("<p>");
+                listIngredients.attr("class", "thumbnail");
+                listIngredients = response.results[i].ingredients;
                 
-                
-                
-                $("#second-page").append(rowDiv.append(colDiv.append(thumbnailDiv.append(img))))
+                $("#second-page").append(rowDiv.append(colDiv.append(recipeTitle)));
+                $("#second-page").append(rowDiv.append(colDiv.append(thumbnailDiv.append(img))));
+                $("#second-page").append(rowDiv.append(colDiv.append(listIngredients)));
             }
             
 
