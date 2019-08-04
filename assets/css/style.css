@@ -135,3 +135,23 @@ position: relative;
 }
 
 
+.thumbnail {
+    display: block;
+}
+
+.title {
+    display: block;
+}
+
+.ingredients {
+    display: block;
+}
+
+img {
+    height: 180px;
+    width: 180px;
+  }
+
+form {
+    margin-left: -80px;
+}
