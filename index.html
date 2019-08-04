@@ -10,7 +10,6 @@
     href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao+Fira+Sans+Condensed|Noto+Sans+TC|Nunito+Sans|Source+Sans+Pro&display=swap"
     rel="stylesheet">
 
-
   <!-- <link href="./assets/css/glider.min.css" rel="stylesheet" type="text/css"> -->
   <link rel="stylesheet" type="text/css" href="./assets/css/glider.min.css">
 
@@ -93,9 +92,12 @@
         </div>
         <div class="form-group">
           <label for="user-ingredients">INGREDIENTS I HAVE:</label>
-          <input type="text" class="form-control" id="user-ingredients" placeholder="Black Beans">
+          <input type="text" class="form-control" id="user-ingredients" placeholder="Add Ingredients">
         </div>
-
+        <!-- <div class="form-group">
+          <label for="alergies">LIST ANY ALLERGIES YOU HAVE:</label>
+          <input type="text" class="form-control" id="alergies" placeholder="Milk, Peanuts, Wheat ... ">
+        </div> -->
         <p id="other-options">DIETARY RESTRICTIONS:</p>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="vegetarian">
@@ -107,21 +109,19 @@
         </div>
         <button type="submit" class="btn btn-light main-button">Submit</button>
       </form>
-
-      <div>
-        <h3>Add your Zip Code to see nearby grocery stores!</h3>
-        <input type="text" class="form-control" id="zip-input" value="90034" aria-describedby="inputZip"
-          placeholder="90034">
-        <button id="zip-submit">Submit</button>
-
-      </div>
     </container>
 
-    <div id="second-page"></div>
+    <div id="second-page">
+
+    </div>
+
+    <hr>
 
     <div id="grocery-store">
+
       <div class="form-group">
         <form>
+
           <h3 id="grocery-header">Show me the nearest grocery stores</h3>
           <div class="form-group">
             <label for="store-input">ZIP CODE</label>
@@ -130,24 +130,49 @@
         </form>
       </div>
       <button type="submit" class="btn btn-light zip-submit">Submit</button>
+
+      <div id="second-page"></div>
+
+      <div id="grocery-store">
+        <div class="form-group">
+          <form>
+            <h3 id="grocery-header">Show me the nearest grocery stores</h3>
+            <div class="form-group">
+              <label for="store-input">ZIP CODE</label>
+              <input type="text" class="form-control" id="store-input" aria-describedby="listCuisine"
+                placeholder="90066">
+            </div>
+          </form>
+        </div>
+        <button type="submit" class="btn btn-light zip-submit">Submit</button>
+      </div>
+
+      <div id="third-page"></div>
+
     </div>
 
-    <div id="third-page"></div>
+    <!-- <div>
+    <h3>Add your Zip Code to see nearby grocery stores!</h3>
+    <input type="text" class="form-control" id="zip-input" value="90034" aria-describedby="inputZip"
+      placeholder="90034">
+    <button id="zip-submit">Submit</button>
 
-  </div>
-  <footer>
-    <p>CHEFTASTIC 2019 &copy;ALL RIGHTS RESERVED</p>
-  </footer>
+  </div> -->
 
-  <!-- <script src="glider.min.js"></script> -->
-  <div id="map"></div>
-  <script src="./assets/javascript/app.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ&libraries=places&callback=initMap"
-    async defer></script>
 
-  <script src="./assets/javascript/app.js"></script>
-  <script src="glider.min.js"></script>
+    <footer>
+      <p>CHEFTASTIC 2019 &copy;ALL RIGHTS RESERVED</p>
+    </footer>
+
+    <!-- <script src="glider.min.js"></script> -->
+    <div id="map"></div>
+    <script src="./assets/javascript/app.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ&libraries=places&callback=initMap"
+      async defer></script>
+
+    <script src="./assets/javascript/app.js"></script>
+    <script src="glider.min.js"></script>
 </body>
 
 </html>
