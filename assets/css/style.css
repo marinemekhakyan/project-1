@@ -1,22 +1,23 @@
 .jumbotron {
     background-color: #f9e547;
     padding: 5px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Liu Jian Mao Cao', cursive;
     margin-bottom: 0px;
-    color: 	#484848;
+    color:	#5f5f5f;
 }
 
 .btn {
-    background-color: #adcb00;
+    background-color: #adcb00e1;
+    font-weight: bold;
 }
 
 .display-4 {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 footer {
     background-color: #f9e547;
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -35,6 +36,9 @@ footer p {
     font-size: 18px;
     margin-bottom: 35px;
     font-family: 'Nunito Sans', sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
 }
 
 .form-control {
@@ -53,6 +57,83 @@ footer p {
 #second-page {
     height: 1000px; 
 }
+
+.glider img {
+    width: 650px;
+    height: auto;
+    border-radius: 5px;  
+    margin: auto; 
+}
+
+form {
+    margin-left: -84px;
+}
+
+.glider-track {
+    width: 3000px;
+    position: relative;
+}
+
+
+.glider-prev { 
+   background-color: #e6e4e4; 
+   padding: 15px;
+   position: absolute;
+   left: 180px;
+
+}
+
+
+.glider-next {
+    background-color: #e6e4e4;
+    padding: 15px;
+    position: absolute;
+    right: 185px;
+
+} 
+
+#pasta {
+    margin-left: 140px;
+}
+
+#salad {
+    margin-left: 100px;
+}
+
+#carrots{
+    margin-left: 215px;
+}
+
+figure {
+    margin-left: 300px;
+}
+
+a {
+    color: #adcb00;
+    text-align: center;
+    font-family: 'Nunito+Sans', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+a:hover {
+    color: #424141;
+    text-decoration: none;
+}
+
+.glider, .glider-contain {
+margin: 0 -6px;
+position: relative;
+}
+
+.recipe-of-the-week {
+    margin-left: 150px;
+    font-family: 'Nunito+Sans', sans-serif;
+    margin-top: 25px;
+    color: #484848;
+    font-weight: lighter;
+}
+
 
 .thumbnail {
     display: block;

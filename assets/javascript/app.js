@@ -3,26 +3,30 @@ var cuisine = "";
 
 var groceryStore = $("#grocery-store"); 
 
-// new Glider(document.querySelector('.glider'), {
-//     slidesToShow: 1,
-//     draggable: true,
-//     dots: '#dots',
-//     arrows: {
-//       prev: '.glider-prev',
-//       next: '.glider-next'
-//     }
-//   });
+window.addEventListener('load', function(){
 
+new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    draggable: true,
+    dots: '#dots',
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    }
+  });
+})
 
 $(document).ready(function () {
     
     $("#second-page").hide();
     $("#grocery-store").hide();
+    $("#third-page").hide();
     
 
     $(".main-button").on("click", function (event) {
         event.preventDefault();
         $("#main-container").hide();
+        $(".glider-contain").hide();
         $("#second-page").show();
         $("#grocery-store").show();
         
@@ -78,5 +82,25 @@ $(document).ready(function () {
             $("#second-page").append(groceryStore);
         
         })
+
     });
+
+            $(".zip-submit").on("click", function (event) {
+                event.preventDefault();
+                // $("#main-container").hide();
+                $("#second-page").hide();
+                $("#grocery-store").hide();
+
+                
+                
+                $("#third-page").show();
+
+                
+
+
+
+    
+    
+    
+            })
 })
