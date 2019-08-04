@@ -4,6 +4,7 @@
     font-family: 'Nunito Sans', sans-serif;
     margin-bottom: 0px;
     color: 	#484848;
+    text-align: center;
 }
 
 .btn {
@@ -47,9 +48,31 @@ footer p {
     padding: 0;
     padding-top: 50px;
     font-family: 'Nunito Sans', sans-serif;
-    height: 1000px;
+    height: 600px;
+    border-width: 10px;
 }
 
 #second-page {
-    height: 600px; 
+    height: 1000px; 
 }
+
+.glider img {
+    /* width: 200px;
+    height: 200px; */
+    width: 60%;
+    height: 80%;
+    border-radius: 5px; 
+}
+
+.glider-track {
+    width: 3000px;
+}
+
+/* .pasta .salad .carrots{
+    margin-left: 200px;
+} */
+
+figure {
+    margin-left: 300px;
+}
+

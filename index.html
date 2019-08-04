@@ -10,11 +10,12 @@
     href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Noto+Sans+TC|Nunito+Sans|Source+Sans+Pro&display=swap"
     rel="stylesheet">
 
-    <link href="./assets/css/glider.min.css" rel="stylesheet" type="text/css">
+  <!-- <link href="./assets/css/glider.min.css" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/glider.min.css">
 
 
   <!-- For our image Carousel -->
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.scss">
+  <!-- <link rel="stylesheet" type="text/css" href="/assets/css/main.scss"> -->
   <!--Bootstrap References-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -40,43 +41,51 @@
 
 <body>
 
+  <div id="glider-images">
+    <div class="jumbotron">
+      <h1 class="display-4">CHEFTASTIC</h1>
+      <p class="catchphrase">Catchphrase here....</p>
+    </div>
 
-  <div class="jumbotron">
-    <h1 class="display-4">CHEFTASTIC</h1>
-    <p class="catchphrase">Catchphrase here....</p>
-  </div>
+    <div class="glider-contain multiple">
+      <!-- <h1>RECIPES OF THE WEEK</h1> -->
 
-  <!-- <div class="glider-contain multiple">
-    <h1>RECIPES OF THE WEEK</h1>
 
-    <button class="glider-prev">
-      <i class="fa fa-chevron-left"></i>
-    </button>
+      <button class="glider-prev">
+        <!-- <i class="fa fa-chevron-left"></i> -->
+        <h2>BUTTON</h2>
+      </button>
 
       <div class="glider">
-
         <figure>
-          <blockquote>"CHICKEN"</blockquote>
-          <figcaption>Try this at home</figcaption>
+          <!-- <blockquote>"CHICKEN"</blockquote>
+          <figcaption>Try this at home</figcaption> -->
+          <img id="pasta" src="./assets/images/pasta.jpg">
         </figure>
 
         <figure>
-          <blockquote>"CHICKEN"</blockquote>
-          <figcaption>Try this at home</figcaption>
+          <!-- <blockquote>"CHICKEN"</blockquote>
+            <figcaption>Try this at home</figcaption> -->
+          <img id="salad" src="./assets/images/salad.jpg">
         </figure>
 
         <figure>
-          <blockquote>"CHICKEN"</blockquote>
-          <figcaption>Try this at home</figcaption>
+          <!-- <blockquote>"CHICKEN"</blockquote>
+              <figcaption>Try this at home</figcaption> -->
+          <img id="carrots" src="./assets/images/carrots.jpg">
+
         </figure>
 
-        <button class="glider-next">
-            <i class="fa fa-chevron-right"></i>
-        </button>
 
       </div>
+      <button class="glider-next">
+        <!-- <i class="fa fa-chevron-right"></i> -->
+        <h2>BUTTON</h2>
+      </button>
 
-  </div> -->
+
+    </div>
+  </div>
 
   <div>
     <container id="main-container">
@@ -91,10 +100,10 @@
           <label for="user-ingredients">INGREDIENTS I HAVE:</label>
           <input type="text" class="form-control" id="user-ingredients" placeholder="Add Ingredients">
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="alergies">LIST ANY ALLERGIES YOU HAVE:</label>
           <input type="text" class="form-control" id="alergies" placeholder="Milk, Peanuts, Wheat ... ">
-        </div>
+        </div> -->
         <p id="other-options">DIETARY RESTRICTIONS:</p>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="vegetarian">
@@ -104,31 +113,52 @@
           <input type="checkbox" class="form-check-input" id="gluten-free">
           <label class="form-check-label" for="exampleCheck1">Gluten-Free</label>
         </div>
-        <button type="submit" class="btn btn-light">Submit</button>
+        <button type="submit" class="btn btn-light main-button">Submit</button>
       </form>
-
-      <div>
-        <h3>Add your Zip Code to see nearby grocery stores!</h3>
-        <input type="text" class="form-control" id="zip-input" value = "90034" aria-describedby="inputZip"
-        placeholder="90034">
-        <button id = "zip-submit">Submit</button>
-        
-      </div>
     </container>
-
 
     <div id="second-page">
 
     </div>
 
-   
+    <hr>
+
+    <div id="grocery-store">
+
+      <div class="form-group">
+        <form>
+
+          <h3 id="grocery-header">Show me the nearest grocery stores</h3>
+          <div class="form-group">
+            <label for="store-input">ZIP CODE</label>
+            <input type="text" class="form-control" id="store-input" aria-describedby="listCuisine" placeholder="90066">
+          </div>
+        </form>
+      </div>
+      <button type="submit" class="btn btn-light zip-submit">Submit</button>
+
+    </div>
+
+    <div id="third-page">
+
+    </div>
+
 
   </div>
+
+  <!-- <div>
+    <h3>Add your Zip Code to see nearby grocery stores!</h3>
+    <input type="text" class="form-control" id="zip-input" value="90034" aria-describedby="inputZip"
+      placeholder="90034">
+    <button id="zip-submit">Submit</button>
+
+  </div> -->
+
+
   <footer>
     <p>CHEFTASTIC 2019 &copy;ALL RIGHTS RESERVED</p>
   </footer>
-  
-  <!-- <script src="glider.min.js"></script> -->
+
   <div id="map"></div>
   <style>
     #map {
@@ -137,8 +167,11 @@
     }
   </style>
   <script src="./assets/javascript/app.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ&libraries=places&callback=initMap" async defer></script>
-  
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ&libraries=places&callback=initMap"
+    async defer></script>
+  <script src="glider.min.js"></script>
+
 </body>
 
 </html>

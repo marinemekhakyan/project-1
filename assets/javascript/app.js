@@ -1,21 +1,129 @@
 var ingredients = "";
 var cuisine = "";
 
-// new Glider(document.querySelector('.glider'), {
-//     slidesToShow: 1,
-//     draggable: true,
-//     dots: '#dots',
-//     arrows: {
-//       prev: '.glider-prev',
-//       next: '.glider-next'
-//     }
-//   });
+var groceryStore = $("#grocery-store"); 
+
+window.addEventListener('load', function(){
+
+new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    draggable: true,
+    dots: '#dots',
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    }
+  });
+})
 
 
+$(document).ready(function () {
+
+
+    $("#second-page").hide();
+    $("#grocery-store").hide();
+    $("#third-page").hide();
+    
+
+    $(".main-button").on("click", function (event) {
+        event.preventDefault();
+        $("#main-container").hide();
+        $("#second-page").show();
+        $("#grocery-store").show();
+        
+        cuisine = $("#cuisine-input").val().trim();
+        ingredients = $("#user-ingredients").val().trim();
+        
+        var queryURL = ("https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=" + ingredients + "&q=" + cuisine + "&p=1");
+        
+        $.ajax({
+            url: queryURL,
+            method: "GET",
+            dataType: "json",
+        }).then(function (response) {
+            console.log(response);
+            
+            // var results = response.data;
+            var rowDiv = $("<div>");
+            rowDiv.addClass("row");
+
+            //will loop through 9 images
+            for (var i = 0; i < 9; i++) {
+               
+                //creating a new div
+                var colDiv = $("<div>");
+
+                //putting these in a column of three
+                colDiv.attr("class","col-md-4");
+    
+                var thumbnailDiv = $("<a>");
+                thumbnailDiv.attr("class", "thumbnail");
+                thumbnailDiv.attr("href", response.results[i].href);
+                thumbnailDiv.attr("target", "_blank");
+
+    
+                var img = $("<img>");
+                img.attr("src", response.results[i].thumbnail);
+                console.log(response.results[i].thumbnail)
+
+                var recipeTitle = $("<p>");
+                recipeTitle.attr("class", "title");
+                recipeTitle = response.results[i].title;
+                console.log(recipeTitle)
+
+                var listIngredients = $("<p>");
+                listIngredients.attr("class", "thumbnail");
+                listIngredients = response.results[i].ingredients;
+                
+                $("#second-page").append(rowDiv.append(colDiv.append(recipeTitle)));
+                $("#second-page").append(rowDiv.append(colDiv.append(thumbnailDiv.append(img))));
+                $("#second-page").append(rowDiv.append(colDiv.append(listIngredients)));
+            }
+            
+
+            $("#second-page").append(groceryStore);
+        
+        })
+
+    });
+
+    
+                var map;
+                var service;
+                var infowindow;
+
+            //click event for zipcode input
+            $(".zip-submit").on("click", function (event) {
+                event.preventDefault();
+                var zipInput = $("#zip-input").val();
+                // $("#main-container").hide();
+                $("#second-page").hide();
+                $("#grocery-store").hide();
+                // $("#glider-images").hide();
+                
+                
+                $("#third-page").show();
+
+
+                //ajax call for Google Geocoding API
+
+                $.ajax({
+                    url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipInput + "&key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ",
+                    method: "GET",
+                    dataType: "json",
+                }).then(function (response) {
+                    // console.log(response);
+                    var long = response.results[0].geometry.location.lng;
+                    var lat = response.results[0].geometry.location.lat;
+                    // console.log('long:', long)
+                    // console.log('lat:', lat)
+                    initMap(lat, long);
+                })
+             })
 //calling the initMap function to show the initial map page before user input. Currently set to Australia.
 
 function initMap(lat, lng) {
-    console.log('has been called');
+    // console.log('has been called');
 
     //if zip code is not provided, default location is Australia or whatever other lat/long we choose here
     if (!lat || !lng) {
@@ -80,98 +188,18 @@ function initMap(lat, lng) {
     });
 }
 
-   $(document).ready(function () {
-
     //creating variables for running the Google Geocode API
-    var map;
-      var service;
-      var infowindow;
+   
 
     
     $("#second-page").hide();
 
-    //on click event for zipcode input
-    $("#zip-submit").on("click", function(event){
-        event.preventDefault();
-        var zipInput = $("#zip-input").val();
-        // console.log(zipInput);
-
-//ajax call for Google Geocoding API
         
-        $.ajax({
-            url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipInput + "&key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ",
-            method: "GET",
-            dataType: "json",
-        }).then(function (response) {
-            // console.log(response);
-            var long = response.results[0].geometry.location.lng;
-            var lat = response.results[0].geometry.location.lat;
-            // console.log('long:', long)
-            // console.log('lat:', lat)
-            initMap(lat, long);
-        })
+        
     })
 
-    $(".btn").on("click", function (event) {
-        event.preventDefault();
-        $("#main-container").hide();
-        $("#second-page").show();
-        
-        cuisine = $("#cuisine-input").val().trim();
-        ingredients = $("#user-ingredients").val().trim();
-        
-        var queryURL = ("https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=" + ingredients + "&q=" + cuisine + "&p=1");
-        
-        $.ajax({
-            url: queryURL,
-            method: "GET",
-            dataType: "json",
-        }).then(function (response) {
-            console.log(response);
-            
-            // var results = response.data;
-            var rowDiv = $("<div>");
-            rowDiv.addClass("row");
-
-            //will loop through 9 images
-            for (var i = 0; i < 9; i++) {
-               
-                //creating a new div
-                var colDiv = $("<div>");
-
-                //putting these in a column of three
-                colDiv.attr("class","col-md-4");
+  
     
-                var thumbnailDiv = $("<a>");
-                thumbnailDiv.attr("class", "thumbnail");
-                thumbnailDiv.attr("href", response.results[i].href);
-                thumbnailDiv.attr("target", "_blank");
-
     
-                var img = $("<img>");
-                img.attr("src", response.results[i].thumbnail);
-                console.log(response.results[i].thumbnail)
-
-                var recipeTitle = $("<p>");
-                recipeTitle.attr("class", "title");
-                recipeTitle = response.results[i].title;
-                console.log(recipeTitle)
-
-                var listIngredients = $("<p>");
-                listIngredients.attr("class", "thumbnail");
-                listIngredients = response.results[i].ingredients;
-                
-                $("#second-page").append(rowDiv.append(colDiv.append(recipeTitle)));
-                $("#second-page").append(rowDiv.append(colDiv.append(thumbnailDiv.append(img))));
-                $("#second-page").append(rowDiv.append(colDiv.append(listIngredients)));
-            }
-            
-
-        
-        })
-
-
-
-    });
        
-})
+
