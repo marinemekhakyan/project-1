@@ -6,6 +6,10 @@ var groceryStore = $("#grocery-store");
 
 $(document).ready(function () {
 
+    $("#second-page").hide();
+    $("#third-page").hide();
+    // $("#map").hide();
+
     window.addEventListener('load', function () {
         new Glider(document.querySelector('.glider'), {
             slidesToShow: 1,
@@ -17,9 +21,14 @@ $(document).ready(function () {
             }
         });
     })
-
+    
+    //creating variables for running the Google Geocode API
+    var map;
+    var service;
+    var infowindow;
+    
     //calling the initMap function to show the initial map page before user input. Currently set to Australia.
-
+    
     function initMap(lat, lng) {
         console.log('has been called');
 
@@ -81,51 +90,19 @@ $(document).ready(function () {
         return $.ajax({
             url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + lng + "&radius=1500&type=store&keyword=grocery&key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ",
             method: "GET",
-            dataType: "json",
+            dataType: "json"
         });
     }
 
 
-    //creating variables for running the Google Geocode API
-    var map;
-    var service;
-    var infowindow;
+    // $(".btn").on("click", function (event) {
 
-
-    $("#second-page").hide();
-    $("#grocery-store").hide();
-    $("#third-page").hide();
-
-
-    //on click event for zipcode input
-    $("#zip-submit").on("click", function (event) {
-        event.preventDefault();
-        var zipInput = $("#zip-input").val();
-        // console.log(zipInput);
-
-        //ajax call for Google Geocoding API
-
-        $.ajax({
-            url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipInput + "&key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ",
-            method: "GET",
-            dataType: "json",
-        }).then(function (response) {
-            // console.log(response);
-            var long = response.results[0].geometry.location.lng;
-            var lat = response.results[0].geometry.location.lat;
-            // console.log('long:', long)
-            // console.log('lat:', lat)
-            initMap(lat, long);
-        })
-    })
-
-    $(".btn").on("click", function (event) {
         $(".main-button").on("click", function (event) {
             event.preventDefault();
             $("#main-container").hide();
             $(".glider-contain").hide();
             $("#second-page").show();
-            $("#grocery-store").show();
+            // $("#map").show();
 
             cuisine = $("#cuisine-input").val().trim();
             ingredients = $("#user-ingredients").val().trim();
@@ -170,25 +147,41 @@ $(document).ready(function () {
                     listIngredients.attr("class", "ingredients");
                     listIngredients = response.results[i].ingredients;
 
-                    $("#second-page").append(rowDiv.append(colDiv.append(recipeTitle)));
-                    $("#second-page").append(rowDiv.append(colDiv.append(thumbnailDiv.append(img))));
-                    $("#second-page").append(rowDiv.append(colDiv.append(listIngredients)));
+                    $("#second-page").prepend(rowDiv.append(colDiv.append(recipeTitle)));
+                    $("#second-page").prepend(rowDiv.append(colDiv.append(thumbnailDiv.append(img))));
+                    $("#second-page").prepend(rowDiv.append(colDiv.append(listIngredients)));
                 }
 
-                $("#second-page").append(groceryStore);
+                // $("#second-page").append(groceryStore);
             })
         });
 
         $(".zip-submit").on("click", function (event) {
             event.preventDefault();
+            var zipInput = $("#zip-input").val();
+
+            // console.log(zipInput);
+            //ajax call for Google Geocoding API
+            
+            $.ajax({
+                url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipInput + "&key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ",
+                method: "GET",
+                dataType: "json",
+            }).then(function (response) {
+                // console.log(response);
+                var long = response.results[0].geometry.location.lng;
+                var lat = response.results[0].geometry.location.lat;
+                // console.log('long:', long)
+                // console.log('lat:', lat)
+                initMap(lat, long);
+            })
             // $("#main-container").hide();
             $("#second-page").hide();
             $("#grocery-store").hide();
-
         });
 
         $("#third-page").show();
 
-    })
-    
+    // })
+
 })
