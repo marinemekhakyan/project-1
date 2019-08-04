@@ -8,6 +8,7 @@
 
 .btn {
     background-color: #adcb00;
+    font-weight: bold;
 }
 
 .display-4 {
@@ -35,6 +36,9 @@ footer p {
     font-size: 18px;
     margin-bottom: 35px;
     font-family: 'Nunito Sans', sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
 }
 
 .form-control {
@@ -55,6 +59,7 @@ footer p {
 }
 
 .glider img {
+    /* position:relative; */
     /* width: 200px;
     height: 200px; */
     width: 60%;
@@ -66,6 +71,18 @@ footer p {
     width: 3000px;
 }
 
+
+/* .glider-prev {
+    /* position: relative; */
+/*     
+}
+
+
+.glider-next {
+    position: relative;
+
+} */ 
+
 /* .pasta .salad .carrots{
     margin-left: 200px;
 
@@ -74,3 +91,13 @@ footer p {
 figure {
     margin-left: 300px;
 }
+
+a {
+    color: #adcb00;
+}
+
+a:hover {
+    color: #484848;
+    text-decoration: none;
+}
+

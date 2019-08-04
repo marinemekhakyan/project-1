@@ -26,6 +26,7 @@ $(document).ready(function () {
     $(".main-button").on("click", function (event) {
         event.preventDefault();
         $("#main-container").hide();
+        $(".glider-contain").hide();
         $("#second-page").show();
         $("#grocery-store").show();
         
@@ -90,7 +91,7 @@ $(document).ready(function () {
                 // $("#main-container").hide();
                 $("#second-page").hide();
                 $("#grocery-store").hide();
-                // $("#glider-images").hide();
+
                 
                 
                 $("#third-page").show();
