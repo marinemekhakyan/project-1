@@ -55,7 +55,7 @@ footer p {
 }
 
 #second-page {
-    height: 600px; 
+    height: 1200px; 
 }
 
 .glider img {
@@ -150,3 +150,8 @@ img {
 #grocery-store{
     margin-left: 200px;
 }
+
+#map {
+    width: 100%;
+    height: 600px;
+  }

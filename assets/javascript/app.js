@@ -4,9 +4,9 @@ var cuisine = "";
 
 var groceryStore = $("#grocery-store");
 
-// $("#second-page").hide();
-// $("#map").hide();
-// $("#third-page").hide();
+$("#second-page").hide();
+$("#map").hide();
+$("#third-page").hide();
 
 window.addEventListener('load', function () {
     new Glider(document.querySelector('.glider'), {
@@ -19,7 +19,6 @@ window.addEventListener('load', function () {
         }
     });
 })
-
 
 //calling the initMap function to show the initial map page before user input. Currently set to Australia.
 
@@ -52,7 +51,7 @@ function initMap(lat, lng) {
     });
 
     //calling the nearbyStores function (below) and passing in the lattitude and longitude to get an ajax response. This is another way of doing an ajax call. Below in the function we skip the ".then" part by adding return before $.ajax
-    nearbyStores(lat, lng)
+    nearbyPlaces(lat, lng)
         .then(function (response) {
 
             //looping through the results array returned from the ajax call to display nearby stores
@@ -79,7 +78,7 @@ function createMarker(place) {
 }
 
 //ajax call for Google Places API 
-function nearbyStores(lat, lng) {
+function nearbyPlaces(lat, lng) {
 
     return $.ajax({
         url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + lng + "&radius=1500&type=store&keyword=grocery&key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ",
@@ -108,8 +107,8 @@ $(document).ready(function () {
             dataType: "json",
         }).then(function (response) {
             // console.log(response);
-            var long = response.results[0].geometry.location.lng;
             var lat = response.results[0].geometry.location.lat;
+            var long = response.results[0].geometry.location.lng;
             // console.log('long:', long)
             // console.log('lat:', lat)
             initMap(lat, long);
@@ -117,6 +116,7 @@ $(document).ready(function () {
     
         $("#second-page").hide();
         $("#third-page").show();
+        $("#map").show();
     });
 
     $(".main-button").on("click", function (event) {
@@ -124,7 +124,6 @@ $(document).ready(function () {
         $("#main-container").hide();
         $(".glider-contain").hide();
         $("#second-page").show();
-        $("#map").show();
 
         cuisine = $("#cuisine-input").val().trim();
         ingredients = $("#user-ingredients").val().trim();
