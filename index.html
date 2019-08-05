@@ -9,17 +9,14 @@
   <link
     href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao+Fira+Sans+Condensed|Noto+Sans+TC|Nunito+Sans|Source+Sans+Pro&display=swap"
     rel="stylesheet">
-
-
-    <!-- <link href="./assets/css/glider.min.css" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/glider.min.css">
-
-
+  <!-- <link href="./assets/css/glider.min.css" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/glider.min.css">
   <!-- For our image Carousel -->
   <!-- <link rel="stylesheet" type="text/css" href="/assets/css/main.scss"> -->
   <!--Bootstrap References-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -29,117 +26,105 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/css/style.css">
 
   <title>CHEFTASTIC</title>
 </head>
 
 <body>
+  <div id="glider-images">
+    <div class="jumbotron">
+      <h1 class="display-4">Cheftastic</h1>
+    </div>
 
-<div id="glider-images">
-  <div class="jumbotron">
-    <h1 class="display-4">Cheftastic</h1>
-  </div>
-
-  <div class="glider-contain multiple">
-    
-    <button class="glider-prev">&lt;</button>
-    
-    <div class="glider">
+    <div class="glider-contain multiple">
+      <button class="glider-prev">&lt;</button>
+      <div class="glider">
         <figure>
           <!-- <blockquote>"CHICKEN"</blockquote>
           <figcaption>Try this at home</figcaption> -->
           <h3 class="recipe-of-the-week">TOP DISH OF THE WEEK</h3>
           <img src="./assets/images/pasta.jpg"><br>
-          <a href="https://www.myrecipes.com/recipe/pasta-with-tomatoes-mozzarella" target="_blank" id="pasta">Pesto Pasta with Tomatos and Mixed Greens</a>
-        </figure>      
-        
+          <a href="https://www.myrecipes.com/recipe/pasta-with-tomatoes-mozzarella" target="_blank" id="pasta">Pesto
+            Pasta with Tomatos and Mixed Greens</a>
+        </figure>
+
         <figure>
           <!-- <blockquote>"CHICKEN"</blockquote>
             <figcaption>Try this at home</figcaption> -->
-            <h3 class="recipe-of-the-week">TOP DISH OF THE WEEK</h3>
-            <img src="./assets/images/salad.jpg"><br>
-            <a href="https://www.myrecipes.com/recipe/spinach-salad-honey-dressing" target="_blank" id="salad">Spinach Salad with Mozzerella & Honey Dressing</a>
-          </figure>
-          
-          <figure>
-            <!-- <blockquote>"CHICKEN"</blockquote>
-              <figcaption>Try this at home</figcaption> -->
-              <h3 class="recipe-of-the-week">TOP DISH OF THE WEEK</h3>
-              <img src="./assets/images/carrots.jpg"><br>
-              <a href="https://www.foodandwine.com/recipes/creamy-pumpkin-soup" target="_blank" id="carrots">Creamy Pumpkin Soup</a>
-
+          <h3 class="recipe-of-the-week">TOP DISH OF THE WEEK</h3>
+          <img src="./assets/images/salad.jpg"><br>
+          <a href="https://www.myrecipes.com/recipe/spinach-salad-honey-dressing" target="_blank" id="salad">Spinach
+            Salad with Mozzerella & Honey Dressing</a>
         </figure>
-        
-        
+
+        <figure>
+          <!-- <blockquote>"CHICKEN"</blockquote>
+              <figcaption>Try this at home</figcaption> -->
+          <h3 class="recipe-of-the-week">TOP DISH OF THE WEEK</h3>
+          <img src="./assets/images/carrots.jpg"><br>
+          <a href="https://www.foodandwine.com/recipes/creamy-pumpkin-soup" target="_blank" id="carrots">Creamy Pumpkin
+            Soup</a>
+        </figure>
       </div>
-          <button class="glider-next">&gt;</button>
-
-
-  </div>
-</div>
-
-  <div>
-    <container id="main-container">
-      <form>
-        <h2 id="mood">I'm in the mood for...</h2>
-        <div class="form-group">
-          <label for="cuisine-input">TYPE OF CUISINE:</label>
-          <input type="text" class="form-control" id="cuisine-input" aria-describedby="listCuisine"
-            placeholder="Mexican">
-        </div>
-        <div class="form-group">
-          <label for="user-ingredients">INGREDIENTS I HAVE:</label>
-          <input type="text" class="form-control" id="user-ingredients" placeholder="Black Beans">
-        </div>
-
-        <p id="other-options">DIETARY RESTRICTIONS:</p>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="vegetarian">
-          <label class="form-check-label" for="exampleCheck1">Vegetarian</label> <br>
-          <input type="checkbox" class="form-check-input" id="vegan">
-          <label class="form-check-label" for="exampleCheck1">Vegan</label> <br>
-          <input type="checkbox" class="form-check-input" id="gluten-free">
-          <label class="form-check-label" for="exampleCheck1">Gluten-Free</label>
-        </div>
-        <button type="submit" class="btn btn-light main-button">Submit</button>
-      </form>
-    </container>
-
-    
-    <div id="second-page">
-      
+      <button class="glider-next">&gt;</button>
     </div>
-   
+  </div>
 
+  <container id="main-container">
+    <form>
+      <h2 id="mood">I'm in the mood for...</h2>
+      <div class="form-group">
+        <label for="cuisine-input">TYPE OF CUISINE:</label>
+        <input type="text" class="form-control" id="cuisine-input" aria-describedby="listCuisine" placeholder="Mexican">
+      </div>
+      <div class="form-group">
+        <label for="user-ingredients">INGREDIENTS I HAVE:</label>
+        <input type="text" class="form-control" id="user-ingredients" placeholder="Add Ingredients">
+      </div>
+      <!-- <div class="form-group">
+          <label for="alergies">LIST ANY ALLERGIES YOU HAVE:</label>
+          <input type="text" class="form-control" id="alergies" placeholder="Milk, Peanuts, Wheat ... ">
+        </div> -->
+      <p id="other-options">DIETARY RESTRICTIONS:</p>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="vegetarian">
+        <label class="form-check-label" for="exampleCheck1">Vegetarian</label> <br>
+        <input type="checkbox" class="form-check-input" id="vegan">
+        <label class="form-check-label" for="exampleCheck1">Vegan</label> <br>
+        <input type="checkbox" class="form-check-input" id="gluten-free">
+        <label class="form-check-label" for="exampleCheck1">Gluten-Free</label>
+      </div>
+      <button type="submit" class="btn btn-light main-button">Submit</button>
+    </form>
+  </container>
 
+  <div id="second-page">
     <div id="grocery-store">
-      
       <div class="form-group">
         <form>
-            <h3 id="grocery-header">Show me the nearest grocery stores</h3>
-            <div class="form-group">
-              <label for="store-input">ZIP CODE</label>
-              <input type="text" class="form-control" id="store-input" aria-describedby="listCuisine"
-                placeholder="90066">
-            </div>
+          <h3 id="grocery-header">Show me the nearest grocery stores</h3>
+          <div class="form-group">
+            <label for="zip-input">ZIP CODE</label>
+            <input type="text" class="form-control" id="zip-input" aria-describedby="listCuisine" placeholder="90066">
+          </div>
         </form>
-        </div>
-        <button type="submit" class="btn btn-light zip-submit">Submit</button>
-
+      </div>
+      <button type="submit" class="btn btn-light zip-submit">Submit</button>
     </div>
-
-    <div id="third-page">
-
-    </div>
- 
-
   </div>
+
+  <div id="third-page"></div>
+
+  <div id="map"></div>
+
   <footer>
-    <p>CHEFTASTIC 2019 &copy;ALL RIGHTS RESERVED......to a group of exceptional people</p>
+    <p>CHEFTASTIC 2019 &copy;ALL RIGHTS RESERVED</p>
   </footer>
-  <script src="./assets/javascript/app.js"></script>
+
+  <script src="assets/javascript/app.js"></script>
   <script src="glider.min.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ&libraries=places&callback=initMap"></script>
 </body>
 
 </html>
