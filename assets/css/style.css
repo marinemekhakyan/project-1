@@ -84,7 +84,7 @@ form {
 .glider-next {
     background-color: #e6e4e4;
     padding: 15px;
-    position: absolute;
+    position: fixed;
     right: 185px;
 } 
 
@@ -155,3 +155,18 @@ img {
     width: 100%;
     height: 600px;
   }
+
+  @media screen and (max-width: 1240px) {
+        .glider img {
+        height: 400px;
+        width: auto;
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .glider img {
+    height: 300px;
+    width: auto;
+}
+
+}

@@ -144,6 +144,12 @@ $(document).ready(function () {
             //will loop through 9 images
             for (var i = 0; i < 9; i++) {
 
+                if (response.results[i].thumbnail === "" ) {
+                    img.attr("src", "../images/carrots.jpg")
+                }
+
+                //Look into indexOf.. Same as index, take out of the array or splice
+
                 //creating a new div
                 var colDiv = $("<div>");
 
@@ -174,4 +180,36 @@ $(document).ready(function () {
             }
         })
     });
+
+    $(".slider").slick({
+
+        // normal options...
+        infinite: false,
+      
+        // the magic
+        responsive: [{
+      
+            breakpoint: 1230,
+            settings: {
+              slidesToShow: 1,
+              infinite: true,
+              width: 80,
+            }
+      
+          }, {
+      
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              dots: true
+            }
+      
+          }, {
+      
+            breakpoint: 300,
+            settings: "unslick" // destroys slick
+      
+          }]
+      });
+
 })
