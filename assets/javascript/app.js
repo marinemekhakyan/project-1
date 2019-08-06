@@ -13,6 +13,7 @@ window.addEventListener('load', function () {
         slidesToShow: 1,
         draggable: true,
         dots: '#dots',
+        speed: 100,
         arrows: {
             prev: '.glider-prev',
             next: '.glider-next'
