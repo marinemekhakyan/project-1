@@ -1,6 +1,7 @@
 
 var ingredients = "";
 var cuisine = "";
+var restriction = "";
 
 var groceryStore = $("#grocery-store");
 
@@ -127,8 +128,10 @@ $(document).ready(function () {
 
         cuisine = $("#cuisine-input").val().trim();
         ingredients = $("#user-ingredients").val().trim();
+        restriction = $(".form-check-input").val();
 
-        var queryURL = ("https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=" + ingredients + "&q=" + cuisine + "&p=1");
+        var queryURL = ("https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=" + ingredients + "&q=" + restriction + cuisine + "&p=1");
+        console.log(queryURL);
 
         $.ajax({
             url: queryURL,
