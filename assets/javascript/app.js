@@ -1,4 +1,3 @@
-
 var ingredients = "";
 var cuisine = "";
 
@@ -88,19 +87,19 @@ function nearbyPlaces(lat, lng) {
 }
 
 $(document).ready(function () {
-    
+
     //creating variables for running the Google Geocode API
     var map;
     var service;
     var infowindow;
-    
+
     $(".zip-submit").on("click", function (event) {
         event.preventDefault();
         var zipInput = $("#zip-input").val();
-    
+
         // console.log(zipInput);
         //ajax call for Google Geocoding API
-    
+
         $.ajax({
             url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipInput + "&key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ",
             method: "GET",
@@ -113,7 +112,7 @@ $(document).ready(function () {
             // console.log('lat:', lat)
             initMap(lat, long);
         })
-    
+
         $("#second-page").hide();
         $("#third-page").show();
         $("#map").show();
@@ -140,7 +139,7 @@ $(document).ready(function () {
             // var results = response.data;
             var rowDiv = $("<div>");
             rowDiv.addClass("row");
-            
+
             //will loop through 9 images
             for (var i = 0; i < 9; i++) {
 
@@ -161,6 +160,7 @@ $(document).ready(function () {
 
                 var recipeTitle = $("<p>");
                 recipeTitle.attr("class", "title");
+                recipeTitle.attr("id", "recipe-title");
                 recipeTitle = response.results[i].title;
                 console.log(recipeTitle)
 
