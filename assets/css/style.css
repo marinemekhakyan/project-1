@@ -170,3 +170,10 @@ img {
     font-size: 16px;
    
   }
+
+  @media screen and (max-width: 980px) {
+      #grocery-store {
+        margin-bottom: 15px;
+      }
+
+  }
