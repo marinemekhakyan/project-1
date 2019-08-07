@@ -76,18 +76,18 @@ form {
 }
 
 .glider-prev { 
-   background-color: #e6e4e4; 
-   padding: 15px;
+   /* background-color: #e6e4e4;  */
+   /* padding: 15px; */
    position: absolute;
    left: 180px;
 }
 
 .glider-next {
-    background-color: #e6e4e4;
-    padding: 15px;
+    /* background-color: #e6e4e4; */
+    /* padding: 15px; */
     position: absolute;
-    right: 185px;
-    
+    bottom: 390px;
+    left: 1000px;
 } 
 
 #pasta {
@@ -166,14 +166,263 @@ img {
     height: 600px;
   }
 
-.col-md-4 {
-    font-size: 16px;
-   
+  @media screen and (max-width: 1240px) {
+        .glider img {
+        height: 400px;
+        width: auto;
+    }
+    .glider-next {
+        bottom: 390px;
+        left: 900px;
+    }
   }
 
   @media screen and (max-width: 980px) {
-      #grocery-store {
-        margin-bottom: 15px;
-      }
+    .glider img {
+    height: 400px;
+    width: auto;
+    }
+    .glider, .glider-contain {
+        margin: 0px -45px;
+    }
+    #pasta, #salad, #carrots {
+        font-size: 18px;
+    }
+    #pasta {
+        margin-left: 100px;
+    }
+    #salad {
+        margin-left: 75px;
+    }
+    #carrots {
+        margin-left: 145px;
+    }
+    .glider-next {
+        bottom: 390px;
+        left: 815px;
+    }
+    .recipe-of-the-week {
+        font-size: 23px;
+        margin-left: 150px;
+    }
+    .glider-next {
+        bottom: 390px;
+        left: 900px;
+    }
+}
 
+
+@media only screen and (max-width: 848px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+    .glider img {
+        width: 500px;
+        height: auto;
+    }
+    .glider, .glider-contain {
+        margin: 0px -78px;
+    }
+    .recipe-of-the-week {
+        font-size: 20px;
+        margin-left: 125px;
+    }
+    #pasta, #salad, #carrots {
+        font-size: 16px;
+    }
+    #pasta {
+        margin-left: 70px;
+    }
+    #salad {
+        margin-left: 70px;
+    }
+    #carrots {
+        margin-left: 150px;
+    }
+    .glider-next {
+        bottom: 390px;
+        left: 742px;
+    }
   }
+
+  @media only screen and (max-width: 550px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+    .glider img {
+        width: 420px;
+        height: auto;
+    }
+    .glider, .glider-contain {
+        margin: 0px -170px;
+    }
+}
+    
+
+  @media only screen and (max-width: 650px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+    .glider img {
+        width: 420px;
+        height: auto;
+    }
+    .glider, .glider-contain {
+        margin: 0px -100px;
+    }
+    .recipe-of-the-week {
+        font-size: 18px;
+        margin-left: 100px;
+    }
+    #pasta, #salad, #carrots {
+        font-size: 16px;
+    }
+    #pasta {
+        margin-left: 35px;
+    }
+    #salad {
+        margin-left: 25px;
+    }
+    #carrots {
+        margin-left: 120px;
+    }
+    .glider-next, .glider-prev {
+        display: none;
+    }
+    .display-4 {
+        font-size: 30px;
+    }
+}
+
+  @media only screen and (max-width: 500px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+    .glider img {
+        width: 300px;
+        height: auto;
+    }
+    .glider, .glider-contain {
+        margin: 0px -100px;
+    }
+    .recipe-of-the-week {
+        font-size: 16px;
+        margin-left: 55px;
+    }
+    #pasta, #salad, #carrots {
+        font-size: 14px;
+    }
+    #pasta {
+        margin-left: 10px;
+    }
+    #salad {
+        margin-left: -2px;
+    }
+    #carrots {
+        margin-left: 70px;
+    }
+    .glider-next, .glider-prev {
+        display: none;
+    }
+    .display-4 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+    .glider img {
+        width: 300px;
+        height: auto;
+    }
+    .glider, .glider-contain {
+        margin: 0px -130px;
+    }
+    .recipe-of-the-week {
+        font-size: 16px;
+        margin-left: 55px;
+    }
+    #pasta, #salad, #carrots {
+        font-size: 14px;
+    }
+    #pasta {
+        margin-left: 10px;
+    }
+    #salad {
+        margin-left: -2px;
+    }
+    #carrots {
+        margin-left: 70px;
+    }
+    .glider-next, .glider-prev {
+        display: none;
+    }
+    .display-4 {
+        font-size: 30px;
+    }
+    #main-container {
+        padding-top: 0px;
+    }
+    .form-group {
+        font-size: 14px;   
+    }
+    .mood {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+    .glider img {
+        width: 280px;
+        height: auto;
+    }
+    .glider, .glider-contain {
+        margin: 0px -140px;
+    }
+    .recipe-of-the-week {
+        font-size: 16px;
+        margin-left: 55px;
+    }
+    #pasta, #salad, #carrots {
+        font-size: 13px;
+    }
+    #pasta {
+        margin-left: 10px;
+    }
+    #salad {
+        margin-left: -2px;
+    }
+    #carrots {
+        margin-left: 70px;
+    }
+    .glider-next, .glider-prev {
+        display: none;
+    }
+    .display-4 {
+        font-size: 30px;
+    }
+    #main-container {
+        padding-top: 0px;
+    }
+    .form-group {
+        font-size: 12px;   
+    }
+    .mood {
+        font-size: 14px;
+    }
+    .form-control {
+        width: 130%;
+    }
+
+}
