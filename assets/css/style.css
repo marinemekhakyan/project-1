@@ -5,6 +5,10 @@
     margin: 0px;
 }
 
+h2 {
+    font-family: 'Liu Jian Mao Cao', cursive;
+}
+
 .btn {
     background-color: #adcb00e1;
     font-weight: bold;
@@ -425,4 +429,9 @@ img {
         width: 130%;
     }
 
+}
+
+#cuisine-input, 
+#user-ingredients {
+    width: 100%;
 }
