@@ -4,6 +4,7 @@ $(document).ready(function () {
     })
 })
 
+
 var ingredients = "";
 var cuisine = "";
 
@@ -100,122 +101,124 @@ $(document).ready(function () {
     var service;
     var infowindow;
 
-    $(".zip-submit").on("click", function (event) {
+    $(".zip-button").on("click", function (event) {
         event.preventDefault();
-        var zipInput = $("#zip-input").val();
-
-        // console.log(zipInput);
-        //ajax call for Google Geocoding API
-
-        $.ajax({
-            url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipInput + "&key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ",
-            method: "GET",
-            dataType: "json",
-        }).then(function (response) {
-            // console.log(response);
-            var lat = response.results[0].geometry.location.lat;
-            var long = response.results[0].geometry.location.lng;
-            // console.log('long:', long)
-            // console.log('lat:', lat)
-            initMap(lat, long);
-        })
-
-        $("#second-page").hide();
-        $("#third-page").show();
-        $("#map").show();
-    });
-
+   
+           var zipInput = $("#zip-input").val();
+           //console.log(zipInput);
+           //ajax call for Google Geocoding API
+           
+           $.ajax({
+               url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + zipInput + "&key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ",
+               method: "GET",
+               dataType: "json",
+            }).then(function (response) {
+                // console.log(response);
+                var lat = response.results[0].geometry.location.lat;
+                var long = response.results[0].geometry.location.lng;
+                // console.log('long:', long)
+                // console.log('lat:', lat)
+                initMap(lat, long);
+            })
+            
+            $("#second-page").hide();
+            $("#third-page").show();
+            $("#map").show();
+        });
+        
     $(".main-button").on("click", function (event) {
         event.preventDefault();
         $("#main-container").hide();
         $(".glider-contain").hide();
         $("#second-page").show();
-
+        
         cuisine = $("#cuisine-input").val().trim();
         ingredients = $("#user-ingredients").val().trim();
-
+        
         var queryURL = ("https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=" + ingredients + "&q=" + cuisine + "&p=1");
-
+        
         $.ajax({
             url: queryURL,
             method: "GET",
             dataType: "json",
         }).then(function (response) {
             console.log(response);
-
+            
             // var results = response.data;
             var rowDiv = $("<div>");
             rowDiv.addClass("row");
-
+            
             //will loop through 9 images
             for (var i = 0; i < 9; i++) {
-
+                
                 if (response.results[i].thumbnail === "") {
                     img.attr("src", "../images/carrots.jpg")
                 }
-
+                
                 //Look into indexOf.. Same as index, take out of the array or splice
-
+                
                 //creating a new div
                 var colDiv = $("<div>");
-
+                
                 //putting these in a column of three
                 colDiv.attr("class", "col-md-4");
-
+                
                 var thumbnailDiv = $("<a>");
                 thumbnailDiv.attr("class", "thumbnail");
                 thumbnailDiv.attr("href", response.results[i].href);
                 thumbnailDiv.attr("target", "_blank");
-
+                
                 var img = $("<img>");
                 img.attr("src", response.results[i].thumbnail);
+                img.attr("class", "results-img")
                 console.log(response.results[i].thumbnail)
-
+                
                 var recipeTitle = $("<p>");
                 recipeTitle.attr("class", "title");
                 recipeTitle = response.results[i].title;
                 console.log(recipeTitle)
-
+                
                 var listIngredients = $("<p>");
                 listIngredients.attr("class", "ingredients");
                 listIngredients = response.results[i].ingredients;
-
+                
                 $("#second-page").prepend(rowDiv.append(colDiv.append(recipeTitle)));
                 $("#second-page").prepend(rowDiv.append(colDiv.append(thumbnailDiv.append(img))));
                 $("#second-page").prepend(rowDiv.append(colDiv.append(listIngredients)));
             }
         })
     });
-
+    
     $(".slider").slick({
-
+        
         // normal options...
         infinite: false,
-
+        
         // the magic
         responsive: [{
-
+            
             breakpoint: 1230,
             settings: {
                 slidesToShow: 1,
                 infinite: true,
                 width: 80,
             }
-
+            
         }, {
-
+            
             breakpoint: 600,
             settings: {
                 slidesToShow: 1,
                 dots: true
             }
-
+            
         }, {
-
+            
             breakpoint: 300,
             settings: "unslick" // destroys slick
-
+            
         }]
     });
-
+    
 })
+
