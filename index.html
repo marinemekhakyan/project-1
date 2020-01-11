@@ -9,10 +9,9 @@
   <link
     href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao+Fira+Sans+Condensed|Noto+Sans+TC|Nunito+Sans|Source+Sans+Pro&display=swap"
     rel="stylesheet">
-  <!-- <link href="./assets/css/glider.min.css" rel="stylesheet" type="text/css"> -->
+
   <link rel="stylesheet" type="text/css" href="./assets/css/glider.min.css">
-  <!-- For our image Carousel -->
-  <!-- <link rel="stylesheet" type="text/css" href="/assets/css/main.scss"> -->
+
   <!--Bootstrap References-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -31,84 +30,56 @@
 </head>
 
 <body>
-  <div id="glider-images">
-    <div class="jumbotron jumbotron-fluid">
-      <h1 class="display-4">Cheftastic</h1>
+
+  <h1 class="display-4">Cheftastic</h1>
+
+    <!-- Hero Image -->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/images/spaghetti-2931846_1920.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+        </div>
+        </div>
+      </div>
     </div>
+  
+    <!-- End of Hero Image -->
 
-    <div class="glider-contain multiple">
-      <button class="glider-prev">&lt;</button>
-      <div class="glider">
-        <figure>
-          <!-- <blockquote>"CHICKEN"</blockquote>
-          <figcaption>Try this at home</figcaption> -->
-          <h3 class="recipe-of-the-week">TOP DISH OF THE WEEK</h3>
-          <img src="./assets/images/pasta.jpg"><br>
-          <a href="https://www.myrecipes.com/recipe/pasta-with-tomatoes-mozzarella" target="_blank" id="pasta">Pesto
-            Pasta with Tomatos and Mixed Greens</a>
-        </figure>
+    <container id="main-container">
+      <form>
+        <h2 id="mood">I'm in the mood for...</h2>
+  
+        <div class="form-group">
+          <label for="cuisine-input">TYPE OF CUISINE:</label>
+          <input type="text" class="form-control" id="cuisine-input" aria-describedby="listCuisine" placeholder="Mexican">
+        </div>
+  
+        <div class="form-group">
+          <label for="user-ingredients">INGREDIENTS I HAVE:</label>
+          <input type="text" class="form-control" id="user-ingredients" placeholder="Add Ingredients">
+        </div>
+  
+        <button type="submit" class="btn btn-light main-button">Submit</button>
+      </form>
+    </container>
 
-        <figure>
-          <!-- <blockquote>"CHICKEN"</blockquote>
-            <figcaption>Try this at home</figcaption> -->
-          <h3 class="recipe-of-the-week">TOP DISH OF THE WEEK</h3>
-          <img src="./assets/images/salad.jpg"><br>
-          <a href="https://www.myrecipes.com/recipe/spinach-salad-honey-dressing" target="_blank" id="salad">Spinach
-            Salad with Mozzerella & Honey Dressing</a>
-        </figure>
-
-        <figure>
-          <!-- <blockquote>"CHICKEN"</blockquote>
-              <figcaption>Try this at home</figcaption> -->
-          <h3 class="recipe-of-the-week">TOP DISH OF THE WEEK</h3>
-          <img src="./assets/images/carrots.jpg"><br>
-          <a href="https://www.foodandwine.com/recipes/creamy-pumpkin-soup" target="_blank" id="carrots">Creamy Pumpkin
-            Soup</a>
-        </figure>
+    <div id="second-page">
+      <div id="grocery-store">
+        <div class="form-group">
+          <form>
+            <h3 id="grocery-header">Show me the nearest grocery stores</h3>
+            <div class="form-group">
+              <label for="zip-input">ZIP CODE</label>
+              <input type="text" class="form-control" id="zip-input" aria-describedby="listCuisine" placeholder="90066">
+            </div>
+          </form>
+        </div>
+        <button type="submit" class="btn btn-light zip-submit">Submit</button>
       </div>
-      <button class="glider-next">&gt;</button>
     </div>
-  </div>
-
-  <container id="main-container">
-    <form>
-      <h2 id="mood">I'm in the mood for...</h2>
-      <div class="form-group">
-        <label for="cuisine-input">TYPE OF CUISINE:</label>
-        <input type="text" class="form-control" id="cuisine-input" aria-describedby="listCuisine" placeholder="Mexican">
-      </div>
-      <div class="form-group">
-        <label for="user-ingredients">INGREDIENTS I HAVE:</label>
-        <input type="text" class="form-control" id="user-ingredients" placeholder="Add Ingredients">
-      </div>
-      
-      <!-- <p id="other-options">DIETARY RESTRICTIONS:</p>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="vegetarian">
-        <label class="form-check-label" for="exampleCheck1">Vegetarian</label> <br>
-        <input type="checkbox" class="form-check-input" id="vegan">
-        <label class="form-check-label" for="exampleCheck1">Vegan</label> <br>
-        <input type="checkbox" class="form-check-input" id="gluten-free">
-        <label class="form-check-label" for="exampleCheck1">Gluten-Free</label>
-      </div> -->
-      <button type="submit" class="btn btn-light main-button">Submit</button>
-    </form>
-  </container>
-
-  <div id="second-page">
-    <div id="grocery-store">
-      <div class="form-group">
-        <form>
-          <h3 id="grocery-header">Show me the nearest grocery stores</h3>
-          <div class="form-group">
-            <label for="zip-input">ZIP CODE</label>
-            <input type="text" class="form-control" id="zip-input" aria-describedby="listCuisine" placeholder="90066">
-          </div>
-        </form>
-      </div>
-      <button type="submit" class="btn btn-light zip-submit">Submit</button>
-    </div>
-  </div>
 
   <div id="third-page"></div>
 
@@ -122,6 +93,20 @@
   <script src="assets/javascript/glider.min.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxLgF8nGcZXFMMIAzR9FOFtFXZtem5YlQ&libraries=places&callback=initMap"></script>
-</body>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+  </body>
 
 </html>
