@@ -16,6 +16,15 @@
     height: 600px;
 }
 
+h2 {
+    font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+.btn {
+    background-color: #adcb00e1;
+    font-weight: bold;
+}
+
 .form-control {
     display: inline!important;
     background-color: beige!important;
@@ -33,7 +42,7 @@ footer {
 
 footer p {
     margin-bottom: 0px;
-    color: 	#484848;
+    color: 	#743030;
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -84,21 +93,33 @@ a:hover {
     margin-left: 150px;
     font-family: 'Nunito+Sans', sans-serif;
     margin-top: 25px;
-    color: #484848;
+    color: #313569;
     font-weight: lighter;
 }
 
 .thumbnail {
     display: block;
+    
+}
+
+.results-img {
+    height: 80px;
+    width: 80px;
+    border-radius: 4px;
+    margin: 10px;
+    border: 3px solid;
 }
 
 .title {
     display: block;
+}
 
+.col-md-4 {
+    text-align: center;
 }
 
 #recipe-title {
-    font-size: 20px;
+    font-size: 40px;
 }
 
 .ingredients {
