@@ -1,8 +1,19 @@
+/* Main Page */
+
 .jumbotron {
     background-color: #f9e547;
     padding: 5px;
     font-family: 'Liu Jian Mao Cao', cursive;
     margin: 0px;
+}
+
+#main-container {
+    justify-content: center;
+    display: flex;
+    padding: 0;
+    padding-top: 50px;
+    font-family: 'Nunito Sans', sans-serif;
+    height: 600px;
 }
 
 .btn {
@@ -46,60 +57,12 @@ footer p {
     width: 150%;
 }
 
-#main-container {
-    justify-content: center;
-    display: flex;
-    padding: 0;
-    padding-top: 50px;
-    font-family: 'Nunito Sans', sans-serif;
-    height: 600px;
-}
-
 #second-page {
     height: 1200px; 
 }
 
-.glider img {
-    width: 650px;
-    height: auto;
-    border-radius: 5px;  
-    margin: auto; 
-}
-
 form {
     margin-left: -80px;
-}
-
-.glider-track {
-    width: 3000px;
-    position: relative;
-}
-
-.glider-prev { 
-   /* background-color: #e6e4e4;  */
-   /* padding: 15px; */
-   position: absolute;
-   left: 180px;
-}
-
-.glider-next {
-    /* background-color: #e6e4e4; */
-    /* padding: 15px; */
-    position: absolute;
-    bottom: 390px;
-    left: 1000px;
-} 
-
-#pasta {
-    margin-left: 140px;
-}
-
-#salad {
-    margin-left: 100px;
-}
-
-#carrots{
-    margin-left: 215px;
 }
 
 figure {
@@ -119,27 +82,12 @@ a:hover {
     text-decoration: none;
 }
 
-.glider, .glider-contain {
-    margin: 0 -6px;
-    position: relative;
-}
-
-.recipe-of-the-week {
-    margin-left: 150px;
-    font-family: 'Nunito+Sans', sans-serif;
-    margin-top: 25px;
-    color: #484848;
-    font-weight: lighter;
-}
-
 .thumbnail {
     display: block;
- 
 }
 
 .title {
     display: block;
-
 }
 
 #recipe-title {

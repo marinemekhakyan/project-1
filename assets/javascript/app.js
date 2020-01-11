@@ -1,4 +1,3 @@
-
 var ingredients = "";
 var cuisine = "";
 
