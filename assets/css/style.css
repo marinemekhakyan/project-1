@@ -33,7 +33,7 @@ footer {
 
 footer p {
     margin-bottom: 0px;
-    color: 	#484848;
+    color: 	#743030;
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -132,7 +132,7 @@ a:hover {
     margin-left: 150px;
     font-family: 'Nunito+Sans', sans-serif;
     margin-top: 25px;
-    color: #484848;
+    color: #313569;
     font-weight: lighter;
 }
 
@@ -147,7 +147,7 @@ a:hover {
 }
 
 #recipe-title {
-    font-size: 20px;
+    font-size: 40px;
 }
 
 .ingredients {
