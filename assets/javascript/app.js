@@ -1,3 +1,4 @@
+
 var ingredients = "";
 var cuisine = "";
 
@@ -122,7 +123,7 @@ $(document).ready(function () {
     $(".main-button").on("click", function (event) {
         event.preventDefault();
         $("#main-container").hide();
-        $(".glider-contain").hide();
+        $(".carousel").hide();
         $("#second-page").show();
 
         cuisine = $("#cuisine-input").val().trim();
