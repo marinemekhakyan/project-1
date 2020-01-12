@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#logo").on("click", function () {
+    $(".display-4").on("click", function () {
         window.location.href = 'index.html';
     })
 })
