@@ -27,7 +27,7 @@ window.addEventListener('load', function () {
     });
 })
 
-//calling the initMap function to show the initial map page before user input. Currently set to Australia.
+//calling the initMap function to show the initial map page before user input. 
 
 function initMap(lat, lng) {
     console.log('has been called');
@@ -101,7 +101,7 @@ $(document).ready(function () {
     var service;
     var infowindow;
 
-    $(".zip-button").on("click", function (event) {
+    $(".zip-submit").on("click", function (event) {
         event.preventDefault();
 
         var zipInput = $("#zip-input").val();
