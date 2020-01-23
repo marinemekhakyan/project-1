@@ -18,7 +18,7 @@
 }
 
 html, body {
-    height: 100%;
+    height: auto;
 }
 
 h2 {
@@ -35,6 +35,7 @@ h2 {
     display: inline!important;
     background-color: beige!important;
 }
+
 
 footer {
     background-color: #f9e547;
@@ -140,15 +141,21 @@ a:hover {
   }
 
 
-  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
       #main-container {
           padding: 15px;
       }
+      html, body {
+          height: auto;
+      }
   }
 
-  @media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) {
     #main-container {
         padding: 15px;
+    }
+    html, body {
+        height: auto;
     }
   }
   
