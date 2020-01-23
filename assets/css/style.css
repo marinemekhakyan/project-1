@@ -18,7 +18,7 @@
 }
 
 html, body {
-    height: auto;
+    height: 100%;
 }
 
 h2 {
@@ -35,7 +35,6 @@ h2 {
     display: inline!important;
     background-color: beige!important;
 }
-
 
 footer {
     background-color: #f9e547;
@@ -145,17 +144,11 @@ a:hover {
       #main-container {
           padding: 15px;
       }
-      html, body {
-          height: auto;
-      }
   }
 
 @media only screen and (max-device-width: 480px) {
     #main-container {
         padding: 15px;
-    }
-    html, body {
-        height: auto;
     }
   }
   
