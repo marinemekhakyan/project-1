@@ -10,10 +10,15 @@
     background-color: #f9e547;
     font-size: 3em!important;
     padding: 10px;
+    cursor: pointer;
 }
 
 .carousel img {
-    height: 600px;
+    height: auto;
+}
+
+html, body {
+    height: 100%;
 }
 
 h2 {
@@ -63,7 +68,7 @@ footer p {
     padding: 0;
     padding-top: 50px;
     font-family: 'Nunito Sans', sans-serif;
-    height: 400px;
+    height: 100%;
     background-color: #f9e547;
 }
 
@@ -135,5 +140,15 @@ a:hover {
   }
 
 
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+      #main-container {
+          padding: 15px;
+      }
+  }
 
+@media only screen and (max-device-width: 480px) {
+    #main-container {
+        padding: 15px;
+    }
+  }
   

@@ -1,0 +1,23 @@
+{
+  "name": "project-1",
+  "version": "1.0.0",
+  "description": "A cuisine page that lets you build your food dishes with whatever ingredients you have at home and help you search for your local market for your ingredients.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marinemekhakyan/project-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marinemekhakyan/project-1/issues"
+  },
+  "homepage": "https://github.com/marinemekhakyan/project-1#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
